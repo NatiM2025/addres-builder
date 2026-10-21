@@ -8,18 +8,19 @@ public class AddressBuilder {
         Scanner input =new Scanner(System.in);
         System.out.println("Full name: ");
         String fullName = input.nextLine();
+
         // billing address
         System.out.println("Billing Street: ");
-        String BillingStreet = input.nextLine();
+        String billingStreet = input.nextLine();
 
         System.out.println("Billing City: ");
-        String BillingCity = input.nextLine();
+        String billingCity = input.nextLine();
 
         System.out.println("Billing State: ");
-        String BillingState = input.nextLine();
+        String billingState = input.nextLine();
 
         System.out.println("Billing zip: ");
-        String BillingZip = input.nextLine();
+        String billingZip = input.nextLine();
 
 
         // Shipping address
@@ -30,9 +31,29 @@ public class AddressBuilder {
         String shippingCity = input.nextLine();
 
         System.out.println("Shipping State: ");
-        String ShippingState = input.nextLine();
+        String shippingState = input.nextLine();
 
         System.out.println("Shipping zip: ");
         String shippingZip = input.nextLine();
+
+
+        //using sting builder
+        StringBuilder address = new StringBuilder();
+        address.append("Billing Address: \n\n");
+        address.append("Street:").append(billingStreet).append("\n");
+        address.append("City:").append(billingCity).append("\n");
+        address.append("State:").append(billingState).append("\n");
+        address.append("Zip:").append(billingZip).append("\n\n");
+
+
+        address.append("Shipping Address: \n\n");
+        address.append("Street:").append(shippingStreet).append("\n");
+        address.append("City:").append(shippingCity).append("\n");
+        address.append("State:").append(shippingState).append("\n");
+        address.append("Zip:").append(shippingZip).append("\n\n");
+
+        String finalAddress = address .toString();
+        System.out.println(finalAddress);
+
     }
 }
